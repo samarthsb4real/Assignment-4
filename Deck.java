@@ -1,3 +1,4 @@
+
 // Purpose: Deck class for the card game
 import java.util.*;
 
@@ -11,8 +12,8 @@ class Deck {
 
     // Create a deck of 52 cards
     public void createDeck() {
-        String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
+        String[] ranks = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
+        String[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
 
         // For each suit, create a card for each rank
         for (String rank : ranks) {
@@ -33,6 +34,13 @@ class Deck {
     // Shuffle the deck
     public void shuffleDeck() {
         Collections.shuffle(deck);
-        displayDeck();
+    }
+
+    // Select 3 random cards from the deck
+    public void selectCards(int numCards) {
+        shuffleDeck();
+        for (int i = 0; i < 3; i++) {
+            System.out.println(deck.get(i));
+        }
     }
 }
