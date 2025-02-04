@@ -33,5 +33,6 @@ class Deck {
     // Shuffle the deck
     public void shuffleDeck() {
         Collections.shuffle(deck);
+        displayDeck();
     }
 }
